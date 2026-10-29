@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    public GameObject cellPrefab;   // Prefab de la celda
-    public int rows = 5;            // Filas
-    public int cols = 9;            // Columnas
-    public float cellSize = 1.5f;   // Espaciado entre celdas
+    public GameObject cellPrefab;   // Prefab de la celda // Usar PascalCase
+    public int rows = 5;            // Filas // Usar PascalCase
+    public int cols = 9;            // Columnas // Sin abreviaciones; Usar PascalCase
+    public float cellSize = 1.5f;   // Espaciado entre celdas // Usar PascalCase
 
     void Start()
     {

@@ -4,20 +4,20 @@ using UnityEngine;
 public class ZombiePrueba : MonoBehaviour
 {
     [Header("Vida")]
-    public int vida = 10;
+    public int vida = 10; // Usar inglés; Usar PascalCase
 
     [Header("Movimiento")]
-    public float velocidad = 0.5f;
+    public float velocidad = 0.5f; // Usar inglés; Usar PascalCase
 
     [Header("Ataque")]
-    public Transform puntoAtaque;          // hijo vacío del zombie, al frente (izquierda)
-    public float radioAtaque = 0.3f;
-    public string tagPlant = "Planta";
-    public int damage = 20;
-    public float tiempoEntreAtaques = 1f;
+    public Transform puntoAtaque;          // hijo vacío del zombie, al frente (izquierda) // Usar inglés; Usar PascalCase
+    public float radioAtaque = 0.3f; // Usar inglés; Usar PascalCase
+    public string tagPlant = "Planta"; // Usar PascalCase
+    public int damage = 20; // Usar PascalCase
+    public float tiempoEntreAtaques = 1f; // Usar inglés; Usar PascalCase
 
-    private float temporizadorAtaque;
-    private PlantHealth plantaObjetivo;
+    private float temporizadorAtaque; // Usar inglés; Usar _camelCase
+    private PlantHealth plantaObjetivo; // Usar inglés; Usar _camelCase
 
     void Update()
     {
@@ -40,7 +40,7 @@ public class ZombiePrueba : MonoBehaviour
         }
     }
 
-    void DetectarPlanta()
+    void DetectarPlanta() // Usar inglés
     {
         plantaObjetivo = null;
         Collider2D[] hits = Physics2D.OverlapCircleAll(puntoAtaque.position, radioAtaque);
@@ -55,17 +55,17 @@ public class ZombiePrueba : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int cantidad)
+    public void TakeDamage(int cantidad) // Respetar el orden de acceso y static; Usar inglés
     {
         vida -= cantidad;
         Debug.Log("Zombie prueba recibió daño, vida: " + vida);
-        if (vida <= 0) Destroy(gameObject);
+        if (vida <= 0) Destroy(gameObject); // Agregar llaves al if
     }
 
     // Para ver el rango en la escena
     void OnDrawGizmosSelected()
     {
-        if (puntoAtaque == null) return;
+        if (puntoAtaque == null) return; // Agregar llaves al if
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(puntoAtaque.position, radioAtaque);
     }

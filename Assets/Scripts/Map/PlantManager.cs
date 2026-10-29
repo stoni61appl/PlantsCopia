@@ -4,9 +4,9 @@ public class PlantManager : MonoBehaviour
 {
     public static PlantManager Instance;
 
-    public GameObject[] plantPrefabs;
+    public GameObject[] plantPrefabs; // Usar PascalCase
 
-    private int selectedIndex = -1;
+    private int selectedIndex = -1; // Usar _camelCase
 
     void Awake()
     {

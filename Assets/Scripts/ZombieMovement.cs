@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ZombieMovement : MonoBehaviour
 {
-    public float velocidad = 1f;
+    public float velocidad = 1f; // Usar inglés; Usar PascalCase
 
     void Update()
     {

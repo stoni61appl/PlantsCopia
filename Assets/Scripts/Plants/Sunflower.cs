@@ -3,11 +3,11 @@ using UnityEngine;
 public class Sunflower : MonoBehaviour
 {
     [Header("Configuración")]
-    public GameObject sunPrefab;
-    public float sunInterval = 5f;
+    public GameObject sunPrefab; // Usar PascalCase
+    public float sunInterval = 5f; // Usar PascalCase
 
     [Header("Posición del Sol")]
-    public Transform sunSpawnPoint;
+    public Transform sunSpawnPoint; // Usar PascalCase
 
     private void Start()
     {

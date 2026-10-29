@@ -1,18 +1,20 @@
+// Sugerencia general de Clean Code: usar if de una sola línea con llaves cuando sea legible.
+
 using UnityEngine;
 
 public class PlantHealth : MonoBehaviour
 {
     [Header("Vida")]
-    public int vidaMaxima = 300;
+    public int vidaMaxima = 300; // Usar inglés; Usar PascalCase
 
-    private int vidaActual;
+    private int vidaActual; // Usar inglés; Usar _camelCase
 
     private void Start()
     {
         vidaActual = vidaMaxima;
     }
 
-    public void RecibirDanio(int cantidad)
+    public void RecibirDanio(int cantidad) // Usar inglés
     {
         vidaActual -= cantidad;
 
@@ -24,7 +26,7 @@ public class PlantHealth : MonoBehaviour
         }
     }
 
-    private void Morir()
+    private void Morir() // Usar inglés
     {
         Destroy(gameObject);
     }

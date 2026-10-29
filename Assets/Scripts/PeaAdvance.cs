@@ -1,30 +1,32 @@
+// Sugerencia general de Clean Code: usar if de una sola línea con llaves cuando sea legible.
+
 using UnityEngine;
 
 public class PeaAdvance : MonoBehaviour
 {
-    public float speed = 8f;
-    public int damage = 20;
-    public float lifeTime = 5f;
+    public float speed = 8f; // Usar PascalCase
+    public int damage = 20; // Usar PascalCase
+    public float lifeTime = 5f; // Usar PascalCase
 
-    private Vector2 direction = Vector2.right;
-    private Vector2 finalDirection = Vector2.right;
+    private Vector2 direction = Vector2.right; // Usar _camelCase
+    private Vector2 finalDirection = Vector2.right; // Usar _camelCase
 
     [Header("Corrección de dirección")]
-    public float straightenTime = 0.5f; 
-    private float timer;
+    public float straightenTime = 0.5f;  // Respetar el orden de acceso y static; Usar PascalCase
+    private float timer; // Separar los grupos de acceso con una línea en blanco; Usar _camelCase
 
 
-    public void SetDirection(Vector2 dir)
+    public void SetDirection(Vector2 dir) // Sin abreviaciones
     {
         direction = dir.normalized;
     }
 
-    private void Start()
+    private void Start() // Respetar el orden de los miembros
     {
         Destroy(gameObject, lifeTime);
     }
 
-    private void Update()
+    private void Update() // Respetar el orden de los miembros
     {
         timer += Time.deltaTime;
 
@@ -40,7 +42,7 @@ public class PeaAdvance : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other) // Respetar el orden de los miembros
     {
         if (other.CompareTag("Zombie"))
         {

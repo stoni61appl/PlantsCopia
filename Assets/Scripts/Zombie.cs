@@ -1,15 +1,17 @@
+// Sugerencia general de Clean Code: usar if de una sola línea con llaves cuando sea legible.
+
 using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    public float velocidad = 1f;
-    public int vidaMaxima = 100;
-    public int danio = 20;
-    public float distanciaAtaque = 0.8f;
+    public float velocidad = 1f; // Usar inglés; Usar PascalCase
+    public int vidaMaxima = 100; // Usar inglés; Usar PascalCase
+    public int danio = 20; // Usar inglés; Usar PascalCase
+    public float distanciaAtaque = 0.8f; // Usar inglés; Usar PascalCase
 
-    private int vidaActual;
-    private Animator animator;
-    private GameObject plantaObjetivo;
+    private int vidaActual; // Usar inglés; Usar _camelCase
+    private Animator animator; // Usar _camelCase
+    private GameObject plantaObjetivo; // Usar inglés; Usar _camelCase
 
     void Start()
     {
@@ -53,7 +55,7 @@ public class Zombie : MonoBehaviour
         }
     }
 
-    public void attack()
+    public void attack() // Respetar el orden de acceso y static; Usar PascalCase
     {
         if (plantaObjetivo != null)
         {
@@ -65,7 +67,7 @@ public class Zombie : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int cantidad)
+    public void TakeDamage(int cantidad) // Usar inglés
     {
         vidaActual -= cantidad;
 

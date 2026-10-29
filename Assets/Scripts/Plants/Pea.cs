@@ -3,14 +3,14 @@ using UnityEngine;
 public class Pea : MonoBehaviour
 {
     [Header("Movimiento")]
-    public float speed = 8f;
+    public float speed = 8f; // Usar PascalCase
 
     [Header("Daño")]
-    public int damage = 20;
+    public int damage = 20; // Usar PascalCase
 
     [Header("Limpieza")]
     [Tooltip("Tiempo máximo de vida antes de autodestruirse si no golpea nada")]
-    public float lifeTime = 5f;
+    public float lifeTime = 5f; // Usar PascalCase
 
     private void Start()
     {

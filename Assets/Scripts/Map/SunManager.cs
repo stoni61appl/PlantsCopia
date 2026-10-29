@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class SunManager : MonoBehaviour
 {
-    public static SunManager instance;
+    public static SunManager instance; // Usar PascalCase
 
     [Header("Soles iniciales")]
-    public int currentSun = 50;
+    public int currentSun = 50; // Usar PascalCase
 
     private void Awake()
     {

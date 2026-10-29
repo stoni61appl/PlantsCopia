@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SeedButton : MonoBehaviour
 {
-    public int plantIndex; 
+    public int plantIndex;  // Usar PascalCase
 
     public void OnClick()
     {

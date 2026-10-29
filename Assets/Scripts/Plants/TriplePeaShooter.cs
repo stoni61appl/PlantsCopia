@@ -6,17 +6,17 @@ using UnityEngine;
 public class TriplePeaShooter : MonoBehaviour
 {
     [Header("Configuración de disparo")]
-    public GameObject peaPrefab;
-    public Transform firePoint;
-    public float fireRate = 1.5f;
+    public GameObject peaPrefab; // Usar PascalCase
+    public Transform firePoint; // Usar PascalCase
+    public float fireRate = 1.5f; // Revisar: usar un nombre descriptivo; Usar PascalCase
 
     [Header("Offsets verticales")]
-    public float verticalOffset = 5f; // separación entre los guisantes
+    public float verticalOffset = 5f; // separación entre los guisantes // Usar PascalCase; Revisar si este código es necesario
 
     [Header("Ángulo de apertura")]
-    public float angleSpread = 15f; // grados de separación
+    public float angleSpread = 15f; // grados de separación // Usar PascalCase
 
-    private float timer;
+    private float timer; // Usar _camelCase
 
     private void Update()
     {
@@ -29,9 +29,9 @@ public class TriplePeaShooter : MonoBehaviour
         }
     }
 
-    private void Disparar()
+    private void Disparar() // Usar inglés
     {
-        Vector3 spawnPos = firePoint != null ? firePoint.position : transform.position;
+        Vector3 spawnPos = firePoint != null ? firePoint.position : transform.position; // Sin abreviaciones
 
         // Centro (recto)
         GameObject peaCenter = Instantiate(peaPrefab, spawnPos, Quaternion.identity);
